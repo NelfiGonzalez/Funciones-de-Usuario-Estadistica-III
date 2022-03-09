@@ -1,6 +1,6 @@
 # Funciones de Usuario Estadística-III 
 ## [Universidad Nacional de Colombia Sede Medellín](https://medellin.unal.edu.co/)
-Funciones **creadas** para facilitar algunas rutinas en modelos del curso Estadística III de la Escuela de Estadística de la Facultad de Ciencias.
+Funciones **creadas** para facilitar algunas rutinas R aplicadas en varios modelos vistos en el curso **Estadística III** de la Escuela de Estadística de la Facultad de Ciencias.
 ### Lista de funciones disponibles
 * En archivo Funciones-Criterios.Informacion-Calidad.Intervalos.R se encuentra la función **exp.crit.inf.resid()** para calcular AIC y BIC, y **amplitud.cobertura()** para calcular la amplitud media y la cobertura (%) de "m">1 Intervalos de Predicción (I.P).
 * En archivo Funcion-regexponencial.R se encuentra la función **regexponencial()** para el ajuste de modelos exponenciales polinomiales y exponenciales polinomiales estacionales
