@@ -4,3 +4,4 @@ Funciones **creadas** para facilitar algunas rutinas en modelos del curso Estad�
 ### Lista de funciones disponibles
 * En archivo Funciones-Criterios.Informacion-Calidad.Intervalos.R se encuentra exp.crit.inf.resid() para calcular AIC y BIC, y amplitud.cobertura() para calcular la amplitud media y la cobertura (%) de "m">1 Intervalos de Predicción (I.P).
 * En archivo Funcion-regexponencial.R se encuentra la función 
+  + ensayo
