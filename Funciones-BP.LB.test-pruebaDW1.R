@@ -39,7 +39,7 @@ teste
 #Resultados:
 # La función crea un objeto tipo "data.frame" que contiene las siguientes variables
 #rho(1) estimado: el valor estimado para la autocorrelación de orden 1 usando los residuales del modelo
-#Estadístico D-W: Valor del estadístico de la prueba, que en el curso denotamos por d1
+#Estadistico D-W: Valor del estadístico de la prueba, que en el curso denotamos por d1
 #VP H1: rho(1)>0: el valor P para el test H0: rho(1)=0, vs. H1:rho(1)>0
 #VP H1: rho(1)<0: el valor P para el test H0: rho(1)=0, vs. H1:rho(1)<0
 
