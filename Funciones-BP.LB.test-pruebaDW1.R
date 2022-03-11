@@ -1,17 +1,17 @@
 #Funciones disponibles en este archivo son las siguientes.
-#Función de usuario BP.LB.test() para realizar las pruebas Ljung-Box o Box-Pierce
-#para m=6, 12, 18,..., hasta m=[maxlag/6] donde maxlag es el máxino orden de rezagos
-#hasta el que se desea aplicar el test. Esta función hace uso de la función R Box.test() 
+#FunciÃ³n de usuario BP.LB.test() para realizar las pruebas Ljung-Box o Box-Pierce
+#para m=6, 12, 18,..., hasta m=[maxlag/6] donde maxlag es el mÃ¡ximo orden de rezagos
+#hasta el que se desea aplicar el test. Esta funciÃ³n hace uso de la funciÃ³n R Box.test() 
 #Argumentos
-# serie:  vector de valores de una realización muestral del proceso sobre el que se quiere evaluar
+# serie:  vector de valores de una realizaciÃ³n muestral del proceso sobre el que se quiere evaluar
 #         el supuesto de ruido blanco a traves de los tests de incorrelacion Ljung-Box o Box-Pierce
-# maxlag: Entero para especificar el máximo orden de rezago temporal hasta el que se quiere probar la significacia de la función de aoticorrelación
-# type:   cadena de caracteres para indicar el tipo de estadísticos de prueba deseado, "Ljung" (valor establecido por defecto) para las pruebas Ljung-Box
-#         "Box" para solicitar las pruebas con estadístico tipo Box-Pierce. 
+# maxlag: Entero para especificar el mÃ¡ximo orden de rezago temporal hasta el que se quiere probar la significacia de la funciÃ³n de aoticorrelaciÃ³n
+# type:   cadena de caracteres para indicar el tipo de estadÃ­sticos de prueba deseado, "Ljung" (valor establecido por defecto) para las pruebas Ljung-Box
+#         "Box" para solicitar las pruebas con estadÃ­stico tipo Box-Pierce. 
 #Resultados
-# La función crea un objeto "data.frame" con tres variables
-# X.squared: los valores de los estadísticos de prueba para m=6, 12,...,[maxlag/6]
-# df: los grados de libertad del estadístico de prueba, corresponden a los valores de m=6, 12,...,[maxlag/6]
+# La funciÃ³n crea un objeto "data.frame" con tres variables
+# X.squared: los valores de los estadÃ­sticos de prueba para m=6, 12,...,[maxlag/6]
+# df: los grados de libertad del estadÃ­stico de prueba, corresponden a los valores de m=6, 12,...,[maxlag/6]
 # p.value: los valores P para las pruebas con m=6, 12,...,[maxlag/6]
 
 BP.LB.test=function(serie,maxlag,type="Ljung"){
@@ -31,15 +31,15 @@ rownames(teste)=lag
 teste
 }
 
-#Función de usuario pruebaDW1() para evaluar el test Durbin-Watson para autocorrelación de orden 1 en MRLM
-#Usa la función R durbinWatsonTest() de la librería car, y proporciona simultáneamente los valores P correspondientes a los tests
-#con hipótesis alternativa de autocorrelación de orden 1 positiva y negativa.
+#FunciÃ³n de usuario pruebaDW1() para evaluar el test Durbin-Watson para autocorrelaciÃ³n de orden 1 en MRLM
+#Usa la funciÃ³n R durbinWatsonTest() de la librerÃ­a car, y proporciona simultÃ¡neamente los valores P correspondientes a los tests
+#con hipÃ³tesis alternativa de autocorrelaciÃ³n de orden 1 positiva y negativa.
 #Argumentos:
-#modelo: Un objeto lm en el que se guardó el ajuste de un MRLM.
+#modelo: Un objeto lm en el que se guardÃ³ el ajuste de un MRLM.
 #Resultados:
-# La función crea un objeto tipo "data.frame" que contiene las siguientes variables
-#rho(1) estimado: el valor estimado para la autocorrelación de orden 1 usando los residuales del modelo
-#Estadístico D-W: Valor del estadístico de la prueba, que en el curso denotamos por d1
+# La funciÃ³n crea un objeto tipo "data.frame" que contiene las siguientes variables
+#rho(1) estimado: el valor estimado para la autocorrelaciÃ³n de orden 1 usando los residuales del modelo
+#EstadÃ­stico D-W: Valor del estadÃ­stico de la prueba, que en el curso denotamos por d1
 #VP H1: rho(1)>0: el valor P para el test H0: rho(1)=0, vs. H1:rho(1)>0
 #VP H1: rho(1)<0: el valor P para el test H0: rho(1)=0, vs. H1:rho(1)<0
 
@@ -47,7 +47,7 @@ pruebaDW1=function(modelo){
 dwneg=durbinWatsonTest(modelo,max.lag=1,method="normal",alternative="negative")
 dwpos=durbinWatsonTest(modelo,max.lag=1,method="normal",alternative="positive")
 res=data.frame(dwneg$r,dwneg$dw,dwpos$p,dwneg$p,row.names="Resultados")
-names(res)=c("rho(1) estimado","Estadístico D-W","VP H1: rho(1)>0","VP H1: rho(1)<0")
+names(res)=c("rho(1) estimado","EstadÃ­stico D-W","VP H1: rho(1)>0","VP H1: rho(1)<0")
 res
 }
 
