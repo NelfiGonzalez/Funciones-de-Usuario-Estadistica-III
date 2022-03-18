@@ -24,6 +24,7 @@
  #fitted: serie de tiempo (objeto ts) de valores ajustados
  #residuals: serie de tiempo (pbjeto ts) de residuos de ajuste
  #forecast: Objeto serie de tiempo multivariada(mts), con los pronósticos puntuales (columna 1), y límites de predicción del 95% (columnas 2 y 3)
+ #SSE: El SSE del ajuste.
 
 SuavizamientoEstacional=function(serie,alpha=NULL,beta=NULL,gamma=NULL,seasonal="additive",h,optim.start=c(alpha = 0.3, beta = 0.1, gamma = 0.1),optim.control = list()){
 suaviza=HoltWinters(serie,alpha=alpha,beta=beta,gamma=gamma,seasonal=seasonal,optim.start=optim.start,optim.control=optim.control)
