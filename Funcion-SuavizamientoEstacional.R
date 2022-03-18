@@ -12,6 +12,7 @@
  #gamma: parámetro del suavizamiento de los efectos estaionales, valor entre 0 y 1
  #seasonal: cadena de caracteres, por defecto "additive" para el caso Holt-Winters aditivo. 
  #Para el caso multiplicativo se define como "multiplicative"
+ #h: Número de pronósticos que se realizarán inmediantamente después del ajuste
  #optim.start: Vector con componentes con nombre alpha, beta y gamma que contienen los valores iniciales 
  #para el optimizador. Sólo se deben especificar los valores necesarios. Ignorado en el caso de un parámetro.
  #optim.control: Lista opcional con parámetros de control adicionales pasados ​​a optim si se usa. 
