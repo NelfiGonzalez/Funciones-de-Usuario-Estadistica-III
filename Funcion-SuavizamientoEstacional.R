@@ -19,7 +19,7 @@
  #Ignorado en el caso de un parámetro.
 
 ##Sus resultados: La función produce un objeto tipo lista con los siguientes componentes
- #coefi: un data.frame con una sola columna de longitud s+2, que guarda exclusivamente los valores al final del
+ #coefficients: un data.frame con una sola columna de longitud s+2, que guarda exclusivamente los valores al final del
  #suavizamiento del nivel, la pendiente y los efectos estacionales (estos últimos en el orden de los periodos del año
  #calendario).
  #fitted: serie de tiempo (objeto ts) de valores ajustados
