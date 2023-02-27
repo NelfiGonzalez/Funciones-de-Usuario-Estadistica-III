@@ -55,8 +55,8 @@ names(efectossuav)=c("s1","s2","s3","s4","s5","s6","s7","s8","s9","s10","s11","s
 if(s==4){
 names(efectossuav)=c("s1","s2","s3","s4")
 }
-pars=data.frame(c(suaviza$alpha,suaviza$beta,suaviza$gamma))
-names(pars)=""
+pars=data.frame(alpha=suaviza$alpha,beta=suaviza$beta,gamma=suaviza$gamma,row.names ="")
+names(pars)=c("alpha","beta","gamma")
 coefi=data.frame(c(suaviza$coef[1:2],efectossuav))
 names(coefi)=""
 cat("\n")
@@ -68,7 +68,7 @@ cat("Smoothing parameters:")
 print(pars)
 cat("\n")
 cat("Coefficients:")
-print(coefi)
+print(t(coefi))
 result=list(coefficients=coefi,fitted=ythat,residuals=res,forecast=predicc,MSE=MSE)
 result
 }
