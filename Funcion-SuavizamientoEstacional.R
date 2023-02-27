@@ -65,10 +65,10 @@ cat("\n")
 print(suaviza$call)
 cat("\n")
 cat("Smoothing parameters:")
-print(pars)
+print(t(pars))
 cat("\n")
 cat("Coefficients:")
-print(t(coefi))
+print(coefi)
 result=list(coefficients=coefi,fitted=ythat,residuals=res,forecast=predicc,MSE=MSE)
 result
 }
