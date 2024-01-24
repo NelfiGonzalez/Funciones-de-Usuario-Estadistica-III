@@ -2,7 +2,7 @@
 #Sus argumentos son:
 #tiempo: Se refiere al vector de valores con el indice de tiempo t.
 #grado: Se refiere al grado p del polinomio deseado.
-#Resultados: La funcion produce un data.frame cuyas variables son t y sus potencias t^j denominadas tj, para j=1, 2,..., p, segun el grado polinomial p.
+#Resultados: La funcion produce un data.frame cuyas variables son t y sus potencias t^j denominadas tj, para j=2,..., p, segun el grado polinomial p.
 
 Mipoly=function(tiempo,grado){
 if(grado>1){
