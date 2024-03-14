@@ -17,20 +17,20 @@
 # method:        Metodo de ajuste: maxima verosimilitud ("ML"), Maxima verosilmilitud combinada con minimos cuadrados condicionales ("CSS-ML") o minimos de cuadrados condicionales ("CSS"). 
 #                El valor predeterminado (a menos que existan valores faltantes) es "CSS-ML", en el cual se usan minimos cuadrados condicionales para encontrar los valores iniciales y 
 #                luego aplica maxima verosimilitud. 
-# optim.method:  El valor pasado al argumento  ‘method’ para ‘optim’ en la funcion Arima(). Por defecto es "BFGS".
-# optim.control: Una lista de parametros de control para ‘optim’, usandos en la funcion Arima().
+# optim.method:  El valor pasado al argumento  â€˜methodâ€™ para â€˜optimâ€™ en la funcion Arima(). Por defecto es "BFGS".
+# optim.control: Una lista de parametros de control para â€˜optimâ€™, usandos en la funcion Arima().
 
 # Resultados:    La funcion produce una lista con las siguientes componentes
 # coefficients:  Matriz con la tabla de parametros estimados, sus errores estandar, estadistico T0 y valor P asociado. Tenga en cuenta que no hay una estimacion conjunta de los parametros
 #                de regresion de la funcion exponencial y de los parametros del modelo ARMA del error estructural, de modo que los errores estandar provienen del ajuste separado de las dos 
 #                estructuras, pero los valores p son calculados bajo una distribucion t-student cuyos grados de libertad son df=n - total de parametros. el objeto tabla puede ser obtenido
-#                con la funcion coef() aplicada al objeto R donde se guarde el resultado de la funcion regexpo.ErrorARMA().
+#                con la funcion coef() aplicada al objeto R donde se guarde el resultado de la funcion regexpo.ErrorARMAv02().
 # fitted:        Objeto tipo ts con los valores ajustados de la respuesta. Estos valores pueden ser accesados mediante la funcion fitted() 
-#                sobre el objeto R donde se guarde el resultado de la funcion regexpo.ErrorARMA().
+#                sobre el objeto R donde se guarde el resultado de la funcion regexpo.ErrorARMAv02().
 # residuals:     Objeto tipo ts con los residuos del ajuste de la respuesta. Estos valores pueden ser accesados mediante la funcion residuals() 
-#                sobre el objeto R donde se guarde el resultado de la funcion regexpo.ErrorARMA(). 
+#                sobre el objeto R donde se guarde el resultado de la funcion regexpo.ErrorARMAv02(). 
 # sigma2:        numerico con la estimacion de la varianza de las innovaciones del modelo ARMA definido para el error estructural del modelo de regresion. Puede ser accesado de la siguiente manera
-#                nombre_objeto$sigma2, donde 'nombre_objeto' es el nombre del objeto R donde se guarda el resultado de la funcion regexpo.ErrorARMA().
+#                nombre_objeto$sigma2, donde 'nombre_objeto' es el nombre del objeto R donde se guarda el resultado de la funcion regexpo.ErrorARMAv02().
 # forecast:      Objeto tipo ts con los pronosticos puntuales de la respuesta para h=ncol(newdata) periodos despues del ajuste.
 
 
