@@ -32,7 +32,7 @@
 #              el valor de 100 al final. Este vector aparece cuando el argumento aditivo=FALSE.
 
 interpdeltas=function(modelo,ordenp=0L,ordenq=0L,ordenP=0L,ordenQ=0L,gradopoly,aditivo=TRUE,plotit=TRUE){
-stopifnot("`modelo` debe ser un objeto clase `lm`,`nls` o `Arima` " =class(modelo)=="lm"|class(modelo)=="nls"|class(modelo)=="Arima")
+#stopifnot("`modelo` debe ser un objeto clase `lm`,`nls` o `Arima` " =class(modelo)=="lm"|class(modelo)=="nls"|class(modelo)=="Arima")
 aux=ordenp+ordenq+ordenP+ordenQ+gradopoly+1
 if(aditivo==TRUE){
 deltas=c(coef(modelo)[-c(1:aux)],0)
