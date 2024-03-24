@@ -52,7 +52,7 @@ ythat=ts(fitted(modelo),freq=frequency(yt),start=start(yt))+fitted(ciclos)
 sigma2=ciclos$sigma2
 s=tsp(yt)[3]
 tajuste=1:length(yt)
-h=ncol(newdata)
+h=nrow(newdata)
 tpron=(length(yt)+1):(length(yt)+h)
 if(end(yt)[2]<s){
 start.pron=c(end(yt)[1],end(yt)[2]+1)
