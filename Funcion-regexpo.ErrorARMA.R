@@ -32,7 +32,7 @@
 #                sobre el objeto R donde se guarde el resultado de la función regexpo.ErrorARMA(). 
 # sigma2:        numérico con la estimación de la varianza de las innovaciones del modelo ARMA definido para el error estructural del modelo de regresión. Puede ser accesado de la siguiente manera
 #                nombre_objeto$sigma2, donde 'nombre_objeto' es el nombre del objeto R donde se guarda el resultado de la función regexpo.ErrorARMA().
-# forecast:      Objeto tipo ts con los pronósticos puntuales de la respuesta para h=ncol(newdata) periodos después del ajuste.
+# forecast:      Objeto tipo ts con los pronósticos puntuales de la respuesta para h=nrow(newdata) periodos después del ajuste.
 
 
 regexpo.ErrorARMA=function(respuesta,names.param,data,newdata,control=nls.control(),order= c(0L, 0L, 0L),seasonal=list(order = c(0L, 0L, 0L),period=NA),fixed=NULL,method=c("CSS-ML", "ML", "CSS"),optim.method="BFGS",optim.control = list()){
