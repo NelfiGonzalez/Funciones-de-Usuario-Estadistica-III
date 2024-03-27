@@ -44,8 +44,10 @@ plot(1:length(deltas),deltas,type="b",pch=1,lwd=3,xlab="periodo calendario",ylab
 axis(1,at=1:length(deltas),1:length(deltas))
 }
 periodo=1:length(deltas)
-res=list(periodo=periodo,deltas=deltas)
+res=list(periodo=periodo,deltasi=deltas)
+res
 }
+else{
 if(aditivo==FALSE){
 expdeltas100=exp(c(coef(modelo)[-c(1:aux)],0))*100
 names(expdeltas100)=paste0("exp","(delta",1:length(expdeltas100),")*100%")
@@ -55,7 +57,10 @@ plot(1:length(expdeltas100),expdeltas100,type="b",pch=1,lwd=3,xlab="periodo cale
 axis(1,at=1:length(expdeltas100),labels=1:length(expdeltas100))
 }
 periodo=1:length(expdeltas100)
-res=list(periodo=periodo,expdeltas100=expdeltas100)
+res=list(periodo=periodo,expdeltasi100=expdeltas100)
+res
 }
 }
+}
+
 
