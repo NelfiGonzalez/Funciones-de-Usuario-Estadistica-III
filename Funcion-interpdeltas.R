@@ -26,9 +26,9 @@
 #Mientras argumento plotit=TRUE, despliega la grafica correspondiente y en la consola R el vector de parametros estacionales estimados (modelos aditivos) o de
 #los valores exponenciados de estos parametros y multipliados por 100% (modelos multiplicativos). Ademas la funcion crea un objeto lista con los siguientes componentes
 #periodo:      vector de valores enteros de 1 a "s" con "s" la longitud anual
-#deltas:       vector con las estimaciones de los parametros asociados a las indicadoras y adiciona el valor de cero al final. Este vector aparece cuando el argumento
+#deltasi:       vector con las estimaciones de los parametros asociados a las indicadoras y adiciona el valor de cero al final. Este vector aparece cuando el argumento
 #              aditivo=TRUE.
-#expdeltas100: vector con los valores exponenciados de las estimaciones de los parametros asociados a las indicadoras, multiplicados por 100 y adiciona 
+#expdeltasi100: vector con los valores exponenciados de las estimaciones de los parametros asociados a las indicadoras, multiplicados por 100 y adiciona 
 #              el valor de 100 al final. Este vector aparece cuando el argumento aditivo=FALSE.
 
 interpdeltas=function(modelo,ordenp=0L,ordenq=0L,ordenP=0L,ordenQ=0L,gradopoly,aditivo=TRUE,plotit=TRUE){
