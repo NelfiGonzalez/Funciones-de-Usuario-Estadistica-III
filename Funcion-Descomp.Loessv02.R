@@ -74,7 +74,7 @@ varpred=MSE1+(Stnuevo^2)*(LOESS$se.fit)^2
 LIP=ytpron1-qt((1-level)/2,df=df1,lower.tail=F)*sqrt(varpred)
 LSP=ytpron1+qt((1-level)/2,df=df1,lower.tail=F)*sqrt(varpred)
 }
-tablapron1=ts(cbind(forecast=ytpron1,lower=LIP,upper=LSP,Pron_Tt=Ttnuevo1,Pron_St=Stnuevo),freq=s,start=start.pron)
+tablapron1=ts(cbind(forecast=ytpron1,lower=LIP,upper=LSP),freq=s,start=start.pron)
 result=list(deltasi=deltas_i,alfa.optim=alfa.optim1,nep=nep1,p=p1,St=St,Tt=Tt1,ytd=ytd,fitted=ythat1,forecast=tablapron1,residuals=et1,MSE=MSE1)
 result
 }
