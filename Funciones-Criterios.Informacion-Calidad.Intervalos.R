@@ -47,17 +47,18 @@ unlist(res)
 #-------------------------------------------------------------------------------------------------------------------------------------
 ##Argumentos:
 # real: un valor o vector de valores observados de la serie en los periodos de pronostico
-# LimInf,LimSup: valores o vectores de valores de los limites inferior y superior de los intervalos de prediccion correspondientes
+# LIP,LSP: valores o vectores de valores de los limites inferior y superior de los intervalos de prediccion correspondientes
 # alpha: valor correspondiente al I.P (1-alpha)100%
 
 ## Valor arrojado: La funcion produce un numero real positivo correspondiente al Score del intervalo (en el caso de un solo IP) 
 #  o al promedio de los Scores de los intervalos de prediccion (en el caso de m IPs)
 #-------------------------------------------------------------------------------------------------------------------------------------
 
-IntervalScore=function(real,LimInf,LimSup,alpha){
-S.alpha=(LimSup-LimInf)+(2/alpha)*(LimInf-real)*ifelse(real<LimInf,1,0)+(2/alpha)*(real-LimSup)*ifelse(real>LimSup,1,0)
+IntervalScore=function(real,LIP,LSP,alpha){
+S.alpha=(LSP-LIP)+(2/alpha)*(LIP-real)*ifelse(real<LIP,1,0)+(2/alpha)*(real-LSP)*ifelse(real>LSP,1,0)
 S.alpha.mean=mean(S.alpha)
 S.alpha.mean
 }
+
 
 
